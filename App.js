@@ -6,43 +6,12 @@ import { SoundButtonGrid } from './SoundButtonGrid';
 
 export default function App() {
 
-  const sounds = [
-    {
-      title: "Bruh",
-      audioFileName: "angel.mp3"
-    },
-    {
-      title: "Ain't no way",
-      audioFileName: "snap-fire.mp3"
-    },
-    {
-      title: "AAAAAAAAAAAAAAAAAAAAAAAA",
-      audioFileName: "angel.mp3"
-    },
-    {
-      title: "You gotta be fucking kidding me",
-      audioFileName: "snap-fire.mp3"
-    },
-    {
-      title: "YOOOOOOOOOOOOOOOO",
-      audioFileName: "angel.mp3"
-    },
-    {
-      title: "Don't worry about it",
-      audioFileName: "snap-fire.mp3"
-    },
-    {
-      title: "Peace",
-      audioFileName: "angel.mp3"
-    },
-  ]
-
   return (
     <View style={styles.container}>
       <AppContextProvider>
         <StatusBar style="auto" />
         <Text style={styles.title}>Ray Soundboard</Text>
-        <SoundButtonGrid sounds={sounds} />
+        <SoundButtonGrid />
       </AppContextProvider>
     </View>
   );
