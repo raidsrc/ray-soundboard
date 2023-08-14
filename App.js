@@ -52,24 +52,9 @@ const Main = ({ navigation, route }) => {
       {turbo
         ? <MyText style={[styles.title, styles.turboTitle]} bold>RAY SOUNDBOARD (TURBO MODE)</MyText>
         : <MyText style={[styles.title,]}>The Ray Soundboard</MyText>}
-      
-      <View style={{ width: "100%" }}>
-        <SoundButtonGrid />
-      </View>
 
-      <View style={{ flex: 2, paddingVertical: 10 }}>
-        <View style={styles.buttonView}>
-          <Button title='toggle turbo mode' color={'#ee2244'} onPress={() => {
-            setTurbo(!turbo)
-          }} />
-        </View>
-        <View style={styles.buttonView}>
-          <Button title='About this app...' onPress={() => {
-            navigation.navigate('Credits')
-          }} />
-        </View>
-      </View>
-      
+      <SoundButtonGrid navigation={navigation} />
+
     </View>
   )
 }
@@ -78,12 +63,13 @@ const Credits = () => {
   return (
     <View style={styles.creditsContainer}>
       <StatusBar style="auto" />
-      <MyText style={styles.smallerTitle}>Ray Soundboard</MyText>
+      <MyText style={styles.smallerTitle}>The Ray Soundboard</MyText>
       <View style={styles.creditsView}>
         <MyText>- A silly ass soundboard built using React Native & Expo</MyText>
         <MyText>- Shittily programmed by yung raid tha one and only !!!</MyText>
+        <MyText>- Voice lines provided by yung raid</MyText>
         <MyText>- App idea suggested by jake on the dock in tahoe</MyText>
-        <MyText>- Sound idea help provided by jake + hyunsoo</MyText>
+        <MyText>- Soundboard ideas provided by jake + hyunsoo</MyText>
         <MyText onPress={() => { Linking.openURL('https://landing.raidsrc.me'); }} style={{ color: 'blue' }}>- https://landing.raidsrc.me</MyText>
       </View>
     </View>
@@ -93,8 +79,6 @@ const Credits = () => {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
     flex: 1,
   },
   turboContainer: {

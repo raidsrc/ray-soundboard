@@ -1,4 +1,4 @@
-import { FlatList, StyleSheet } from "react-native"
+import { Button, FlatList, View } from "react-native"
 import { SoundPressable } from "./SoundPressable";
 import { useAppContext } from "../context/AppContext";
 
@@ -101,7 +101,25 @@ export const SoundButtonGrid = () => {
   return (
     <FlatList data={turbo ? turboSounds : sounds} style={{ width: '100%', }}
       renderItem={({ item }) => <SoundPressable soundMetadata={item} />}
-      keyExtractor={item => item.title} numColumns={3} />
+      keyExtractor={item => item.title} numColumns={3} ListFooterComponent={<OtherButtons />} />
   )
 }
 
+const OtherButtons = () => {
+  const { turbo, setTurbo, navigation } = useAppContext()
+
+  return (
+    <View style={{ flex: 2, paddingBottom: 20 }}>
+      <View style={{ margin: 3 }}>
+        <Button title='toggle turbo mode' color={'#ee2244'} onPress={() => {
+          setTurbo(!turbo)
+        }} />
+      </View>
+      <View style={{ margin: 3 }}>
+        <Button title='About this app...' onPress={() => {
+          navigation.navigate("Credits")
+        }} />
+      </View>
+    </View>
+  )
+}

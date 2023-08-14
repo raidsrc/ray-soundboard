@@ -41,7 +41,7 @@ export const SoundPressable = ({ soundMetadata }: { soundMetadata: SoundType }) 
 const styles = StyleSheet.create({
   soundButton: {
     flexDirection: 'column',
-    margin: 5,
+    margin: 3,
     marginBottom: 9,
     padding: 10,
     backgroundColor: '#8c47cc',
