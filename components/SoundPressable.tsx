@@ -10,39 +10,48 @@ type SoundType = {
 }
 
 export const SoundPressable = ({ soundMetadata }: { soundMetadata: SoundType }) => {
-  const [sound, setSound] = useState<Audio.Sound | null>(null)
+  const [inc, setInc] = useState(1)
+  const [sound1, setSound1] = useState<Audio.Sound | null>()
+  // const [sound1, setSound1] = useState<Audio.Sound | null>(null)
+  // const [sound2, setSound2] = useState<Audio.Sound | null>(null)
+  // const [sound3, setSound3] = useState<Audio.Sound | null>(null)
+  // const [sound4, setSound4] = useState<Audio.Sound | null>(null)
+  // const [sound5, setSound5] = useState<Audio.Sound | null>(null)
+  // const [sound6, setSound6] = useState<Audio.Sound | null>(null)
+  // const [sound7, setSound7] = useState<Audio.Sound | null>(null)
+  // const [sound8, setSound8] = useState<Audio.Sound | null>(null)
   const [pressed, setPressed] = useState(false)
   const { turbo } = useAppContext()
 
-  async function playSound() {
+  async function playSound(inc: number) {
     console.log('Loading Sound');
 
     const { sound } = await Audio.Sound.createAsync(soundMetadata.audioFile);
-    setSound(sound);
+    setSound1(sound);
 
     console.log('Playing Sound');
     await sound.playAsync();
   }
 
   useEffect(() => {
-    return sound
+    return sound1
       ? () => {
         console.log('Unloading Sound');
-        sound.unloadAsync();
+        sound1.unloadAsync();
       }
       : undefined;
-  }, [sound]);
+  }, [sound1]);
 
   const { title, audioFile } = soundMetadata
   return (
     <Pressable style={[styles.soundButton,
     turbo ? { backgroundColor: "#ff0000", } : null,
     pressed ? styles.pressIn : styles.pressOut]}
-      onPress={playSound} onPressIn={() => setPressed(true)} onPressOut={() => setPressed(false)} accessibilityLabel={title}>
+      onPress={() => playSound(inc)} onPressIn={() => setPressed(true)} onPressOut={() => setPressed(false)} accessibilityLabel={title}>
       {
         !turbo
           ? <MyText style={[{ color: 'white', fontSize: 15, },]}>{title}</MyText>
-          : <MyText style={[{ color: 'black', fontSize: 15, },]} bold>{title}</MyText>
+          : <MyText style={[{ color: 'black', fontSize: 15, textAlign: 'right' },]} bold>{title}</MyText>
       }
     </Pressable>
   )
