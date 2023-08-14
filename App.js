@@ -57,7 +57,7 @@ const Main = ({ navigation, route }) => {
         <SoundButtonGrid />
       </View>
 
-      <View style={{ flex: 2, paddingVertical: 10, }}>
+      <View style={{ flex: 2, paddingVertical: 10 }}>
         <View style={styles.buttonView}>
           <Button title='toggle turbo mode' color={'#ee2244'} onPress={() => {
             setTurbo(!turbo)
@@ -69,6 +69,7 @@ const Main = ({ navigation, route }) => {
           }} />
         </View>
       </View>
+      
     </View>
   )
 }

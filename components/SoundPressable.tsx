@@ -20,7 +20,7 @@ export const SoundPressable = ({ soundMetadata }: { soundMetadata: SoundType }) 
 
     console.log('Playing Sound');
     await sound.playAsync();
-    setTimeout(() => sound.unloadAsync(), 2000)
+    setTimeout(() => sound.unloadAsync(), 3000)
   }
 
   const { title } = soundMetadata
@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
     padding: 10,
     backgroundColor: '#8c47cc',
     flex: 1,
-    height: 100,
+    height: 85,
     borderRadius: 3,
     shadowOffset: {
       width: 0,

@@ -33,6 +33,14 @@ export const SoundButtonGrid = () => {
       audioFile: require("../assets/audio-files/man.wav")
     },
     {
+      title: "I doubt it",
+      audioFile: require("../assets/audio-files/doubt.wav")
+    },
+    {
+      title: "Huh",
+      audioFile: require("../assets/audio-files/huh.wav")
+    },
+    {
       title: "Damn",
       audioFile: require("../assets/audio-files/damn.wav")
     },
@@ -69,6 +77,14 @@ export const SoundButtonGrid = () => {
     {
       title: "Man...",
       audioFile: require("../assets/audio-files/man-turbo.wav")
+    },
+    {
+      title: "I doubt it",
+      audioFile: require("../assets/audio-files/doubt-turbo.wav")
+    },
+    {
+      title: "Huh",
+      audioFile: require("../assets/audio-files/huh-turbo.wav")
     },
     {
       title: "Damn",

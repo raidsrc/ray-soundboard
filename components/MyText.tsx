@@ -1,8 +1,9 @@
 import { StyleProp, Text, TextStyle, } from "react-native"
 
-export const MyText = ({ style, children, bold }: {
+export const MyText = ({ style, children, bold, onPress }: {
   children: React.ReactNode, 
   style: StyleProp<TextStyle>
+  onPress?: () => {}
   bold?: boolean
 }) => {
 
@@ -11,7 +12,7 @@ export const MyText = ({ style, children, bold }: {
   }
 
   return (
-    <Text style={[style, bold ? { fontFamily: 'Inter-Black' } : { fontFamily: 'Inter-Regular' }]}>
+    <Text onPress={onPress} style={[style, bold ? { fontFamily: 'Inter-Black' } : { fontFamily: 'Inter-Regular' }]}>
       {children}
     </Text>
   )
