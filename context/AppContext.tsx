@@ -10,7 +10,6 @@ const AppContext = createContext<AppContextType | null>(null)
 
 export const AppContextProvider = ({children} : {children: React.ReactNode}) => {
   const [turbo, setTurbo] = useState(false)
-  
 
   return (
     <AppContext.Provider value = {{
