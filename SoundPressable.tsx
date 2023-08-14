@@ -2,7 +2,6 @@ import { AVPlaybackSource, Audio } from "expo-av";
 import { useState, useEffect } from "react";
 import { Pressable, StyleSheet, Text } from "react-native";
 
-
 type SoundType = {
   title: string
   audioFile: AVPlaybackSource

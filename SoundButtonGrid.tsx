@@ -41,14 +41,9 @@ export const SoundButtonGrid = () => {
     },
   ]
   return (
-    <FlatList data={sounds} style={styles.soundButtonGrid}
+    <FlatList data={sounds} style={{width: '100%'}}
       renderItem={({ item }) => <SoundPressable soundMetadata={item} />}
       keyExtractor={item => item.title} numColumns={3} />
   )
 }
 
-const styles = StyleSheet.create({
-  soundButtonGrid: {
-    width: '100%',
-  }
-});
