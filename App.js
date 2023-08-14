@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { Button, StyleSheet, Text, View, useAnimatedValue, } from 'react-native';
+import { Button, StyleSheet, View, } from 'react-native';
 import { useCallback } from 'react';
 import { AppContextProvider, useAppContext } from './context/AppContext';
 import { SoundButtonGrid } from './components/SoundButtonGrid';
@@ -51,7 +51,7 @@ const Main = ({ navigation, route }) => {
       <StatusBar style="auto" />
       {turbo
         ? <MyText style={[styles.title, styles.turboTitle]} bold>RAY SOUNDBOARD (TURBO MODE)</MyText>
-        : <MyText style={[styles.title,]}>Ray Soundboard</MyText>}
+        : <MyText style={[styles.title,]}>The Ray Soundboard</MyText>}
       
       <View style={{ width: "100%" }}>
         <SoundButtonGrid />
