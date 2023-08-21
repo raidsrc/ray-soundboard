@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction, createContext, useContext, useState } from 'react'
+import { Dispatch, SetStateAction, createContext, useState } from 'react'
 
 type AppContextType = {
   turbo: boolean 
@@ -18,14 +18,4 @@ export const AppContextProvider = ({children} : {children: React.ReactNode}) => 
       {children}
     </AppContext.Provider>
   )
-}
-
-export const useAppContext = () => {
-  const context = useContext(AppContext)
-  if (context === null) {
-    throw new Error(
-      "useAppContext must be used within an App Context Provider"
-    )
-  }
-  return context
 }
