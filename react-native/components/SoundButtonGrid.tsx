@@ -45,6 +45,10 @@ export const SoundButtonGrid = () => {
       audioFile: require("../assets/audio-files/damn.wav")
     },
     {
+      title: "Washed (TODO)",
+      audioFile: require("../assets/audio-files/damn.wav")
+    },
+    {
       title: "Peace",
       audioFile: require("../assets/audio-files/peace.wav")
     },
@@ -88,6 +92,10 @@ export const SoundButtonGrid = () => {
     },
     {
       title: "Damn",
+      audioFile: require("../assets/audio-files/damn-turbo.wav")
+    },
+    {
+      title: "Washed (TODO)",
       audioFile: require("../assets/audio-files/damn-turbo.wav")
     },
     {
