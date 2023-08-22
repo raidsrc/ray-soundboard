@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { Button, StyleSheet, View, } from 'react-native';
+import { StyleSheet, View, } from 'react-native';
 import { useCallback } from 'react';
 import { AppContextProvider, useAppContext } from './context/AppContext';
 import { SoundButtonGrid } from './components/SoundButtonGrid';
@@ -61,7 +61,7 @@ const Main = ({ navigation, route }) => {
 
 const Credits = () => {
   return (
-    <View style={styles.creditsContainer}>
+    <View style={styles.container}>
       <StatusBar style="auto" />
       <MyText style={styles.smallerTitle}>The Ray Soundboard</MyText>
       <View style={styles.creditsView}>
@@ -96,10 +96,6 @@ const styles = StyleSheet.create({
   },
   turboTitle: {
     color: '#fff',
-  },
-  creditsContainer: {
-    backgroundColor: '#fff',
-    flex: 1,
   },
   smallerTitle: {
     fontSize: 40,
