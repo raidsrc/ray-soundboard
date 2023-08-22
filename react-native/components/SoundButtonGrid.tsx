@@ -1,8 +1,9 @@
 import { Button, FlatList, View } from "react-native"
 import { SoundPressable } from "./SoundPressable";
-import { useAppContext } from "../context/AppContext";
+import { RootStackParamList, useAppContext } from "../context/AppContext";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 
-export const SoundButtonGrid = () => {
+export const SoundButtonGrid = ({navigation} : {navigation: NativeStackNavigationProp<RootStackParamList>}) => {
   const sounds = [
     {
       title: "Bruh",

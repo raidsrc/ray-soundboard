@@ -2,7 +2,7 @@ import { StyleProp, Text, TextStyle, } from "react-native"
 
 export const MyText = ({ style, children, bold, onPress }: {
   children: React.ReactNode, 
-  style: StyleProp<TextStyle>
+  style?: StyleProp<TextStyle>
   onPress?: () => {}
   bold?: boolean
 }) => {
